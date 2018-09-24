@@ -25,6 +25,14 @@ Debug > Start Debugging
 ```
 Debug mode opens a new VS Code window titled `[Extension Development Host]`. In this window, open a repo (`File > Open`) to test the extension on. A sample repo to test on `https://github.com/srcclr/example-ruby`
 
+Make sure to update `settings.json` with a profile before scanning.
+
+```
+{
+ `srcclr.profile`:  //profile to use when scanning. View ~/.srcclr.yml for the list of profiles you 
+}
+```
+
 ## Extension Settings
 
 Override the following configuration property either in your User or Workspace settings.
