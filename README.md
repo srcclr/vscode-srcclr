@@ -29,7 +29,7 @@ Make sure to update `settings.json` with a profile before scanning.
 
 ```
 {
- `srcclr.profile`:  //profile to use when scanning. View ~/.srcclr.yml for the list of profiles you 
+ `srcclr.profile`:  //profile to use when scanning. View ~/.srcclr.yml for the list of profiles available
 }
 ```
 
@@ -37,4 +37,4 @@ Make sure to update `settings.json` with a profile before scanning.
 
 Override the following configuration property either in your User or Workspace settings.
 
-* `srcclr.profile`: profile to use when scanning. View ~/.srcclr.yml for the list of profiles you  
+* `srcclr.profile`: profile to use when scanning. View ~/.srcclr.yml for the list of profiles available  
