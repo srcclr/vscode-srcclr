@@ -6,7 +6,24 @@ Enables scanning of VS Code workspaces for vulnerabilities and, for now, simply 
 
 ## Requirements
 
-For this to work, SourceClear agent needs to be installed your machine. Please visit [SourceClear](https://www.sourceclear.com) to set up one.  
+For this to work, SourceClear agent needs to be installed in your machine. Please visit [SourceClear](https://www.sourceclear.com) to set up one.  
+
+## Development
+
+Requires: VS Code and SourceClear agent locally installed with valid profiles.
+
+Clone this repo and open in VS Code
+
+```
+git clone git@git.ci.srcclr.io:jonah/vscode-srcclr.git
+```
+
+Start debug mode by finding the following in the top menu
+
+```
+Debug > Start Debugging
+```
+Debug mode opens a new VS Code window titled `[Extension Development Host]`. In this window, open a repo (`File > Open`) to test the extension on. A sample repo to test on `https://github.com/srcclr/example-ruby`
 
 ## Extension Settings
 
