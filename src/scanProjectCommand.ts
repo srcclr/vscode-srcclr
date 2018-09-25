@@ -76,7 +76,7 @@ export class ScanProjectCommand implements Disposable {
   // TODO: A command helper class
   _buildCommand(profile: string, json: boolean, allowDirty: boolean): string {
     const scanPath = `cd ${workspace.rootPath}`;
-    const profileOpt = `--profile=${profile}`;
+    const profileOpt = profile !== '' ? `--profile=${profile}` : '';
     const jsonOpt = json ? `--json` : "";
     const allowDirtyOpt = allowDirty ? `--allow-dirty` : "";
 
