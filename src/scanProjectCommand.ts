@@ -24,6 +24,13 @@ export class ScanProjectCommand implements Disposable {
     const config = workspace.getConfiguration("srcclr");
     const activeProfile: string = config.get<string>("profile") || "";
 
+    if (activeProfile === "") {
+      window.showInformationMessage(
+        "Scan failed. Please set 'srcclr.profile' in your Workspace settings"
+      );
+      return;
+    }
+
     // TODO: Controllers for status bar interactions
     window.showInformationMessage("Scanning for vulnerabilities");
 
@@ -31,6 +38,7 @@ export class ScanProjectCommand implements Disposable {
 
     // Build command string to execute in child process.
     const cmd = this._buildCommand(activeProfile, true, true);
+    console.log(`Executing: ${cmd}`);
 
     // TODO: If possible, address SIGTERM better with less arbitrary constant for maxBuffer
     const child = cp.exec(cmd, { maxBuffer: 1024 * 10000 });
@@ -76,7 +84,7 @@ export class ScanProjectCommand implements Disposable {
   // TODO: A command helper class
   _buildCommand(profile: string, json: boolean, allowDirty: boolean): string {
     const scanPath = `cd ${workspace.rootPath}`;
-    const profileOpt = profile !== '' ? `--profile=${profile}` : '';
+    const profileOpt = profile !== "" ? `--profile=${profile}` : "";
     const jsonOpt = json ? `--json` : "";
     const allowDirtyOpt = allowDirty ? `--allow-dirty` : "";
 
