@@ -12,7 +12,7 @@ For this to work, SourceClear agent needs to be installed in your machine. Pleas
 
 One way to install the extension is through the following steps:
 1. Find and download the `.vsix` file included in this project which typically looks like `vscode-srcclr-<version>.vsix`
-2. Run `code --install-extension vscode-srcclr-<version>.vsix`
+2. In VSCode Extensions, install the extension by `Install from VSIX...`. Alternatively, in the terminal, run `code --install-extension vscode-srcclr-<version>.vsix`. 
 3. Verify by finding `vscode-srcclr` in your list of installed extensions.
 
 ### Extension Settings
