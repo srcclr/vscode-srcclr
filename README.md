@@ -21,7 +21,7 @@ git clone git@git.ci.srcclr.io:jonah/vscode-srcclr.git
 Start debug mode by finding the following in the top menu
 
 ```
-Debug > Start Debugging
+Run > Start Debugging
 ```
 Debug mode opens a new VS Code window titled `[Extension Development Host]`. In this window, open a repo (`File > Open`) to test the extension on. A sample repo to test on `https://github.com/srcclr/example-ruby`
 
