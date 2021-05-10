@@ -35,6 +35,6 @@ Make sure to update `settings.json` with a profile before scanning.
 
 ## Extension Settings
 
-Override the following configuration property either in your User or Workspace settings.
+Override the following configuration property either in your User or Workspace settings (Press cmd+p and enter `> settings.json`). 
 
 * `srcclr.profile`: profile to use when scanning. View ~/.srcclr.yml for the list of profiles available  
