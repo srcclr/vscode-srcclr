@@ -22,9 +22,9 @@ export class ScanProjectCommand implements Disposable {
   private _execute() {
     // TODO: Enhancement to allow a user-friendly config settings UI to choose from available profiles
     const config = workspace.getConfiguration("srcclr");
-    const activeProfile: string = config.get<string>("profile") || "";
-
-    if (activeProfile === "") {
+    const activeProfile: (string | null | undefined)  = config.get<string | null | undefined>("profile");
+    
+    if (activeProfile == null) {
       window.showInformationMessage(
         "Scan failed. Please set 'srcclr.profile' in your Workspace settings"
       );
