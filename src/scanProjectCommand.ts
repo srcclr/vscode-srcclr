@@ -41,7 +41,7 @@ export class ScanProjectCommand implements Disposable {
     console.log(`Executing: ${cmd}`);
 
     // TODO: If possible, address SIGTERM better with less arbitrary constant for maxBuffer
-    const child = cp.exec(cmd, { maxBuffer: 1024 * 10000 });
+    const child = cp.exec(cmd, { maxBuffer: 1024 * 100000 });
 
     let results = "";
     child.stdout.on("data", data => {
