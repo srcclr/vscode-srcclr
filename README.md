@@ -30,7 +30,7 @@ Requires: VS Code and SourceClear agent locally installed with valid profiles.
 Clone this repo and open in VS Code
 
 ```
-git clone git@git.ci.srcclr.io:jonah/vscode-srcclr.git
+git clone git@github.com:srcclr/vscode-srcclr.git 
 ```
 
 Start debug mode by finding the following in the top menu
